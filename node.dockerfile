@@ -19,18 +19,28 @@
 
 FROM        node:alpine
 
-LABEL       author="Dan Wahlin"
+LABEL       author="Javier Ramos"
 
-ARG         PACKAGES=nano
-
-ENV         TERM xterm
-RUN         apk update && apk add $PACKAGES
+ENV         NODE_ENV=production
+ENV         PORT=3000
 
 WORKDIR     /var/www
 COPY        package.json package-lock.json ./
 RUN         npm install
 
+# Lo mismo que  COPY . . 
+# o que         COPY . /var/www
 COPY        . ./
 EXPOSE      $PORT
 
 ENTRYPOINT  ["npm", "start"]
+
+# docker build -t <name> .
+# docker build --tag <name> .
+# docker build -t <registry>/<name>:<tag> .
+# docker build -t jaramosdal/nodeapp:1.0 -f node.dockerfile .
+
+# docker images         List Docker images
+# docker rmi <imageId>  Remove an image
+
+# docker push <username>/<imagename>:<tag>
