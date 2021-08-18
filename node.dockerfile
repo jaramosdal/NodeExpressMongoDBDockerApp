@@ -40,7 +40,15 @@ ENTRYPOINT  ["npm", "start"]
 # docker build -t <registry>/<name>:<tag> .
 # docker build -t jaramosdal/nodeapp:1.0 -f node.dockerfile .
 
-# docker images         List Docker images
-# docker rmi <imageId>  Remove an image
-
-# docker push <username>/<imagename>:<tag>
+# docker images                                                         List Docker images
+# docker rmi <imageId>                                                  Remove an image
+                        
+# docker push <username>/<imagename>:<tag>                      
+                        
+# docker run -p 8080:80 -d nginx:alpine                                 Crea una instancia de contenedor a partir de la imagen nginx:alpine
+                        
+# docker ps                                                             Muestra todos los contenedores que están corriendo
+# docker ps -a                                                          Muestra todos los contenedores
+                        
+# docker stop <id>                                                      Parar un contenedor
+# docker rm <id>                                                        Borrar un contenedor
