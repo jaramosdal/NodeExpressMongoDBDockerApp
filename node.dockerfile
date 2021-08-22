@@ -52,3 +52,10 @@ ENTRYPOINT  ["npm", "start"]
                         
 # docker stop <id>                                                      Parar un contenedor
 # docker rm <id>                                                        Borrar un contenedor
+
+# docker logs <containerId>                                             View Container Logs
+
+
+# Volumes 
+# docker run -p 8080:80 -v ${pwd}:/usr/share/nginx/html nginx:alpine
+# docker run -p 3000:3000 -v ${PWD}/logs:/var/www/logs jaramosdal/nodeapp:1.0
