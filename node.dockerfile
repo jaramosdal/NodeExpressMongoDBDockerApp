@@ -59,3 +59,9 @@ ENTRYPOINT  ["npm", "start"]
 # Volumes 
 # docker run -p 8080:80 -v ${pwd}:/usr/share/nginx/html nginx:alpine
 # docker run -p 3000:3000 -v ${PWD}/logs:/var/www/logs jaramosdal/nodeapp:1.0
+
+# Networks 
+# docker network create
+# docker network ls
+# docker network rm [network]
+# docker network create --driver bridge isolated_network
