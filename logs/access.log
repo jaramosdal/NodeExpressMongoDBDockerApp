@@ -1,0 +1,4 @@
+::ffff:172.18.0.1 - - [23/Aug/2021:20:25:08 +0000] "GET / HTTP/1.1" 200 3160 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::ffff:172.18.0.1 - - [23/Aug/2021:20:25:08 +0000] "GET /images/docker.png HTTP/1.1" 200 16443 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::ffff:172.18.0.1 - - [23/Aug/2021:20:25:08 +0000] "GET /styles/styles.css HTTP/1.1" 200 4057296 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::ffff:172.18.0.1 - - [23/Aug/2021:20:25:08 +0000] "GET /favicon.ico HTTP/1.1" 200 1150 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
