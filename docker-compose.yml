@@ -31,3 +31,7 @@ services:
 networks:
   nodeapp-network:
     driver: bridge
+
+# docker-compose build  Crea las imágenes para todos los servicios de nuestro docker-compose
+# docker-compose up     El equivalente a docker run. Corre todos los componentes definidos en el docker-compose
+# docker-compose down   Para todos los contenedores y los borra

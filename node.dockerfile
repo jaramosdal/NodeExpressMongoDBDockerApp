@@ -70,3 +70,8 @@ ENTRYPOINT  ["npm", "start"]
 # docker run -d -p 3000:3000 --net=isolated_network --name=nodeapp -v ${PWD}/logs:/var/www/logs jaramosdal/nodeapp:1.0
 
 # docker network inspect <networkId>
+
+
+# Shell into a Container
+# docker exec -it <containerId> [sh, bash, PowerShell] 
+# docker exec -it <containerId> sh 
