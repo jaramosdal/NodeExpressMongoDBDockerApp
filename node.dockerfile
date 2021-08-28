@@ -66,6 +66,8 @@ ENTRYPOINT  ["npm", "start"]
 # docker network rm [network]
 # docker network create --driver bridge isolated_network
 
+# unsa red bridge permite a containers dentro de la misma red comunicarse entre sí
+
 # docker run -d --net=isolated_network --name=mongodb mongo
 # docker run -d -p 3000:3000 --net=isolated_network --name=nodeapp -v ${PWD}/logs:/var/www/logs jaramosdal/nodeapp:1.0
 
