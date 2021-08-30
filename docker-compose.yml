@@ -5,10 +5,10 @@ services:
   node:
     container_name: nodeapp
     image: nodeapp
-    build:
-      context: .
-      dockerfile: node.dockerfile
-      args:
+    build:                            # especificamos el build cuando es una imagen que vamos a construir (no pull)
+      context: .                      # ubicación del dockerfile para esta imagen
+      dockerfile: node.dockerfile     # nombre del dockerfile (por defecto siempre será Dockerfile)
+      args:                           # environment variables definidas en el dockerfile (PACKAGES) a las que asignamos valor (nano wget curl)
         PACKAGES: "nano wget curl"
     ports:
       - "3000:3000"
@@ -24,7 +24,7 @@ services:
       
   mongodb:
     container_name: mongodb
-    image: mongo # en este caso, como no tenemos build, lo que hará es buscar una imagen llamada mongo en nuestro repositorio local, y si no la encuentra, irá a nuestro repositorio remoto por defecto (en este caso docker hub)
+    image: mongo  # en este caso, como no tenemos build, lo que hará es buscar una imagen llamada mongo en nuestro repositorio local, y si no la encuentra, irá a nuestro repositorio remoto por defecto (en este caso docker hub)
     networks:
       - nodeapp-network
 
