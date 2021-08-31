@@ -10,6 +10,11 @@ services:
       dockerfile: node.dockerfile     # nombre del dockerfile (por defecto siempre será Dockerfile)
       args:                           # environment variables definidas en el dockerfile (PACKAGES) a las que asignamos valor (nano wget curl)
         PACKAGES: "nano wget curl"
+        buildversion: 1
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - build=1
     ports:
       - "3000:3000"
     networks:

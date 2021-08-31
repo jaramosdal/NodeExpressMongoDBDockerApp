@@ -21,8 +21,11 @@ FROM        node:alpine
 
 LABEL       author="Javier Ramos"
 
-ENV         NODE_ENV=production
-ENV         PORT=3000
+ARG         buildversion
+
+# ENV         NODE_ENV=production
+# ENV         PORT=3000
+# ENV         build=$buildversion
 
 WORKDIR     /var/www
 COPY        package.json package-lock.json ./
@@ -32,6 +35,8 @@ RUN         npm install
 # o que         COPY . /var/www
 COPY        . ./
 EXPOSE      $PORT
+
+RUN echo "Build version: $build"
 
 ENTRYPOINT  ["npm", "start"]
 
